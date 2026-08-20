@@ -122,3 +122,4 @@ This project provided practical experience with:
 - DevOps workflow
 - Troubleshooting and deployment
 Jenkins SCM Polling configured successfully.
+Testing Jenkins automatic trigger

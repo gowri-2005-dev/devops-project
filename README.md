@@ -121,3 +121,4 @@ This project provided practical experience with:
 - Minikube
 - DevOps workflow
 - Troubleshooting and deployment
+Jenkins SCM Polling configured successfully.

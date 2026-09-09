@@ -8,18 +8,18 @@ pipeline {
         }
         stage('Build Docker Image') {
            steps {
-               sh 'docker buildx build -t devops-node-app --load .'
+               bat 'docker buildx build -t devops-node-app --load .'
            }
         }
         stage('Verify Docker Image') {
            steps {
-               sh 'docker images devops-node-app'
+               bat 'docker images devops-node-app'
            }
         }
         stage('Kubernetes Deployment') {
            steps {
-               sh 'kubectl apply -f deployment.yaml'
-               sh 'kubectl apply -f service.yaml'
+               bat 'kubectl apply -f deployment.yaml'
+               bat 'kubectl apply -f service.yaml'
            }
         }
     }

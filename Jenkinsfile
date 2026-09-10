@@ -1,8 +1,9 @@
 pipeline {
     agent any
-     environment {
-        PATH = "C:\\Users\\ELCOT\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
-    }
+    environment {
+    PATH = "C:\\Users\\ELCOT\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
+    KUBECONFIG = "C:\\Users\\ELCOT\\.kube\\config"
+}
     stages {
         stage('Checkout') {
            steps {

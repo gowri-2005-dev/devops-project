@@ -1,4 +1,3 @@
-
 pipeline {
     agent { label 'ec2-agent' }
 
@@ -23,9 +22,11 @@ pipeline {
         }
 
         stage('Kubernetes Deployment') {
+            agent { label 'built-in' }
+
             steps {
-                sh 'kubectl apply -f deployment.yaml'
-                sh 'kubectl apply -f service.yaml'
+                bat 'kubectl apply -f deployment.yaml'
+                bat 'kubectl apply -f service.yaml'
             }
         }
 
